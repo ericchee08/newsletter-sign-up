@@ -7,23 +7,10 @@ body {
   align-items: center;
   height: 100vh;
   font-family: "Roboto", sans-serif;
+  color: #37384e;
 }
 
-h1 {
-  font-size: 4rem;
-}
-
-p {
-  font-size: 1.15em;
-  display: flex; /* Add flex display to the paragraphs */
-  align-items: center; /* Center the content vertically */
-}
-
-.icon-success {
-  width: 25px; /* Adjust the width as needed */
-  height: 25px; /* Adjust the height as needed */
-  padding-right: 1rem;
-}
+/* LAYOUT STYLING*/
 
 .container {
   border-radius: 2rem;
@@ -33,19 +20,14 @@ p {
   display: flex;
 }
 
-.information {
-  border: 2px solid black;
-}
-
 .subscribe {
-  border: 2px solid black;
   display: flex;
   flex-direction: column;
 }
 
 .left-column {
-  border: 2px solid black;
-  padding: 2rem 5rem;
+  padding: 0rem 5rem;
+  padding-bottom: 5rem;
   flex: 1; /* Take up as much space as possible within the container */
   display: flex; /* Use flexbox to center the content */
   flex-direction: column; /* Stack items vertically */
@@ -62,6 +44,55 @@ p {
 .left-column .subscribe {
   width: 100%;
 }
+
+/* FONT SIZE STYLING */
+
+h1 {
+  font-size: 4rem;
+}
+
+p {
+  font-size: 1.15em;
+  display: flex; /* Add flex display to the paragraphs */
+  align-items: center; /* Center the content vertically */
+}
+
+#sub-heading {
+  margin-bottom: 2.3rem;
+}
+
+.icon-success {
+  width: 25px; /* Adjust the width as needed */
+  height: 25px; /* Adjust the height as needed */
+  padding-right: 1rem;
+}
+
+label {
+  margin-top: 1.2rem;
+  padding: 0.8rem 0;
+  font-weight: bold;
+}
+
+input {
+  border-radius: 0.6rem;
+  height: 3.4rem;
+  font-size: large;
+  padding: 0 1.8rem;
+  margin-bottom: 1.7rem;
+}
+
+button {
+  height: 4rem;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  border-radius: 0.6rem;
+  background-color: #37384e;
+}
+
+/* MEDIA QUERIES */
 
 @media (max-width: 768px) {
   .container {
