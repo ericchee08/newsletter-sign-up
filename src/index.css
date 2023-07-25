@@ -13,4 +13,42 @@ body {
   width: 56rem;
   height: 40rem;
   background-color: #f5f5f5;
+  display: flex;
+}
+
+.information {
+  border: 2px solid black;
+  padding: 2rem 5rem;
+}
+
+.subscribe {
+  border: 2px solid black;
+  padding: 2rem 5rem;
+}
+
+.left-column {
+  border: 2px solid black;
+  padding: 2rem 5rem;
+  flex: 1; /* Take up as much space as possible within the container */
+}
+
+.right-column {
+  border: 2px solid black;
+  padding: 2rem 5rem;
+  flex: 1; /* Take up as much space as possible within the container */
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack columns vertically */
+    width: 100%; /* Take up full width in mobile view */
+    height: 100vh; /* Let the height adjust automatically based on content */
+    border-radius: 0;
+    margin: 0;
+  }
+
+  .right-column {
+    order: -1;
+    /* Move the right column above the left column in mobile view */
+  }
 }
