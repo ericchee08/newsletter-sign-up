@@ -6,36 +6,61 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+p {
+  font-size: 1.15em;
+  display: flex; /* Add flex display to the paragraphs */
+  align-items: center; /* Center the content vertically */
+}
+
+.icon-success {
+  width: 25px; /* Adjust the width as needed */
+  height: 25px; /* Adjust the height as needed */
+  padding-right: 1rem;
 }
 
 .container {
   border-radius: 2rem;
-  width: 56rem;
-  height: 40rem;
+  width: 80rem;
+  height: 55rem;
   background-color: #f5f5f5;
   display: flex;
 }
 
 .information {
   border: 2px solid black;
-  padding: 2rem 5rem;
 }
 
 .subscribe {
   border: 2px solid black;
-  padding: 2rem 5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .left-column {
   border: 2px solid black;
   padding: 2rem 5rem;
   flex: 1; /* Take up as much space as possible within the container */
+  display: flex; /* Use flexbox to center the content */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
 }
 
 .right-column {
   border: 2px solid black;
   padding: 2rem 5rem;
   flex: 1; /* Take up as much space as possible within the container */
+}
+.left-column .information,
+.left-column .subscribe {
+  width: 100%;
 }
 
 @media (max-width: 768px) {
