@@ -3,11 +3,15 @@ import Subscribe from "./Components/Subscribe";
 import Image from "./Components/Image";
 
 function App() {
+  const onSubscribe = () => {
+    //add logic for routing to confirmed page
+  };
+
   return (
     <div className="container">
       <div className="left-column">
         <Information />
-        <Subscribe />
+        <Subscribe onSubscribe={onSubscribe} />
       </div>
       <div className="right-column">
         <Image />
