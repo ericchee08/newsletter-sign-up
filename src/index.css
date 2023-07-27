@@ -56,14 +56,23 @@ p {
   align-items: center;
 }
 
+span.error {
+  color: #df5043;
+  font-weight: bold;
+}
+
 #sub-heading {
   margin-bottom: 2.3rem;
 }
 
 label {
-  margin-top: 1.2rem;
-  padding: 0.8rem 0;
   font-weight: bold;
+}
+
+.email-label {
+  margin: 2rem 0 0.7rem 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 input {
@@ -73,6 +82,13 @@ input {
   padding: 0 1.8rem;
   margin-bottom: 1.7rem;
   border: solid lightgray 1px;
+}
+
+input.input-error,
+select.input-error {
+  border-color: #df5043;
+  background-color: #fee8e6;
+  color: #df5043;
 }
 
 .button {
@@ -91,6 +107,10 @@ input {
 .button:hover {
   background-image: linear-gradient(to right, #ff586b, #ff6a3a);
   box-shadow: 0 20px 15px rgba(221, 38, 38, 0.4);
+}
+
+.button:disabled {
+  opacity: 0.35;
 }
 
 /* IMAGES */
