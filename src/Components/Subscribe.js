@@ -4,6 +4,11 @@ import { basicSchema } from "../schemas";
 const onSubmit = async (values, actions) => {
   console.log(values);
   console.log(actions);
+
+  //when user submits the onSubscribe is called with the routing logic
+
+  //send the email to subscribed confirmation component
+
   await new Promise((resolve) => setTimeout(resolve, 1000));
   actions.resetForm();
 };
@@ -16,10 +21,6 @@ const Subscribe = ({ onSubscribe }) => {
     validationSchema: basicSchema,
     onSubmit,
   });
-
-  //when user submits the onSubscribe is called with the routing logic
-
-  //send the email to subscribed confirmation component
 
   return (
     <form className="subscribe" onSubmit={handleSubmit}>
