@@ -1,4 +1,4 @@
-import iconSuccess from "./assets/images/icon-success.svg";
+import iconSuccess from "../assets/images/icon-success.svg";
 
 const Information = () => {
   return (

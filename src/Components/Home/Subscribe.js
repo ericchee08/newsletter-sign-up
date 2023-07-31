@@ -1,5 +1,5 @@
 import { useFormik } from "formik";
-import { basicSchema } from "../schemas";
+import { basicSchema } from "../../schemas";
 
 const onSubmit = async (values, actions) => {
   console.log(values);

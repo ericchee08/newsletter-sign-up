@@ -1,6 +1,6 @@
-import Information from "./Components/Information";
-import Subscribe from "./Components/Subscribe";
-import Image from "./Components/Image";
+import Information from "./Components/Home/Information";
+import Subscribe from "./Components/Home/Subscribe";
+import Image from "./Components/Home/Image";
 
 function App() {
   const onSubscribe = () => {
