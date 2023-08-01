@@ -102,6 +102,7 @@ select.input-error {
   border-radius: 0.6rem;
   background-color: #37384e;
   transition: background-image 0.3s, box-shadow 0.2s;
+  width: 100%;
 }
 
 .button:hover {
