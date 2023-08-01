@@ -1,7 +1,30 @@
-import React from "react";
+import SharedButton from "../SharedButton";
+import { Link } from "react-router-dom";
+import iconList from "../assets/images/icon-list.svg";
 
 const SuccessPage = () => {
-  return <div>success</div>;
+  const email = "ericchee@hotmail.co.uk";
+  return (
+    <div className="success-container">
+      <div className="success-header">
+        <div className="success-header-text">
+          <img className="icon-list" src={iconList} alt="" />
+          Thanks for subscribing!
+        </div>
+      </div>
+      <div className="success-info">
+        <div className="success-info-text">
+          A confirmation email has been sent to <br /> <span style={{ fontWeight: "bold" }}>{email}</span> Please open it and click the button inside to confirm your
+          subscription
+        </div>
+      </div>
+      <div className="dismiss-button">
+        <Link to="/">
+          <SharedButton value={"Dismiss message"}></SharedButton>
+        </Link>
+      </div>
+    </div>
+  );
 };
 
 export default SuccessPage;
