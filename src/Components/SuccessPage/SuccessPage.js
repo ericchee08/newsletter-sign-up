@@ -1,9 +1,12 @@
 import SharedButton from "../SharedButton";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import iconList from "../assets/images/icon-list.svg";
 
 const SuccessPage = () => {
-  const email = "ericchee@hotmail.co.uk";
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const email = searchParams.get("email") || "No email entered";
+
   return (
     <div className="success-container">
       <div className="success-header">

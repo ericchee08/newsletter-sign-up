@@ -11,14 +11,16 @@ const onSubmit = async (values, actions) => {
   actions.resetForm();
 };
 
-const Subscribe = ({ onSubscribe }) => {
-  const { values, errors, touched, isSubmitting, handleBlur, handleChange, handleSubmit } = useFormik({
+const Subscribe = () => {
+  const { values, errors, touched, isSubmitting, handleBlur, handleChange, handleSubmit, isValid } = useFormik({
     initialValues: {
       email: "",
     },
     validationSchema: basicSchema,
     onSubmit,
   });
+
+  const isLinkDisabled = !isValid || !values.email;
 
   return (
     <form className="subscribe" onSubmit={handleSubmit}>
@@ -27,7 +29,7 @@ const Subscribe = ({ onSubscribe }) => {
         {errors.email && touched.email && <span className="error">Valid email required</span>}
       </div>
       <input id="email" type="email" value={values.email} onChange={handleChange} onBlur={handleBlur} className={errors.email && touched.email ? "input-error" : ""} />
-      <Link className="success-link" to="/success">
+      <Link className="success-link" to={!isLinkDisabled ? `/success?email=${values.email}` : "#"}>
         <SharedButton disabled={isSubmitting} value={"Subscribe to monthly newsletter"} />
       </Link>
     </form>
