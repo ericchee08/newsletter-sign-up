@@ -236,4 +236,25 @@ select.input-error {
   .illustration-signup-mobile {
     width: 100%;
   }
+
+  .success-container {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+  }
+
+  .success-info-text {
+    font-size: 1rem;
+  }
+
+  .success-header-text {
+    font-size: 2.6rem;
+  }
+
+  .icon-list {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    margin-bottom: 1.8rem;
+  }
 }
